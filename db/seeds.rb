@@ -9,6 +9,7 @@ user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
 Product.destroy_all
+Like.destroy_all
 
 10.times do
   product = Product.new(
@@ -19,7 +20,7 @@ end
 
 
 
-5.times do
+10.times do
   like = Like.new(
     user_id: User.pluck(:id).sample,
     product_id: Product.pluck(:id).sample,
