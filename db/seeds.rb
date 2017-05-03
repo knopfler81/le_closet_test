@@ -7,3 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
+
+
+10.times do
+  product = Product.new(
+    name: Faker::Pokemon.name
+  )
+  product.save!
+end
