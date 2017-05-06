@@ -23,6 +23,8 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'high_voltage'
 group :development do
+  gem "binding_of_caller"
+  gem 'pry-byebug'
   gem 'better_errors'
   gem 'rails_layout'
   gem 'spring-commands-rspec'
@@ -31,6 +33,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'awesome_print'
 end
 group :test do
   gem 'capybara'

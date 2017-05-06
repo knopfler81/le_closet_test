@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'visitors#index'
-  devise_for :users
-  resources :users
+    root to: 'products#index'
+    devise_for :users
 
-  resources :products do
-    resource :likes
+    resources :users
+
+    resources :users do
+      resources :products do
+        resources :likes
+      end
+    end
   end
-end

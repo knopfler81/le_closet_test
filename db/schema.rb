@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170503110922) do
+ActiveRecord::Schema.define(version: 20170505131017) do
 
   create_table "likes", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "user_id"
-    t.boolean  "liked",      default: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
