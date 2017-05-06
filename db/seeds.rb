@@ -23,8 +23,8 @@ end
 10.times do
   like = Like.new(
     user_id: User.pluck(:id).sample,
-    product_id: Product.pluck(:id).sample,
-    liked: true
+    product_id: Product.pluck(:id).sample
+
   )
   like.save!
 end
