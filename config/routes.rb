@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
     resources :users
 
+    resources :products do
+      resources :likes
+    end
+
     resources :users do
       resources :products do
         resources :likes
