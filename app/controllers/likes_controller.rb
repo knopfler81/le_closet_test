@@ -8,11 +8,12 @@ class LikesController < ApplicationController
 
     @like.save!
     if @like.save
-      redirect_to user_path(@user)
+      flash[:notice] = "You like this product"
+      redirect_to product_path(@product)
     else
-     redirect_to product_path
+      flash[:alert] = "Something when wrong"
+      redirect_to product_path(@product)
     end
   end
-
 
 end
