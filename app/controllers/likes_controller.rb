@@ -11,7 +11,7 @@ class LikesController < ApplicationController
       flash[:notice] = "You like this product"
       redirect_to product_path(@product)
     else
-      flash[:alert] = "Something when wrong"
+      flash[:alert] = "Something went wrong"
       redirect_to product_path(@product)
     end
   end
