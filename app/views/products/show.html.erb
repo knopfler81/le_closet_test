@@ -1,3 +1,7 @@
 <h1><%= @product.name %></h1>
 
-<%= link_to "Like", product_likes_path(@product), method: :post %>
+<% unless @product.liking_users.include? current_user %>
+  <%= link_to "Like", product_likes_path(@product), method: :post %>
+<% else %>
+  <p>You already like this product</p>
+<% end %>

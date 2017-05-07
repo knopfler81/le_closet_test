@@ -1,4 +1,5 @@
 class LikesController < ApplicationController
+  before_action :authenticate_user!
 
   def create
     @user = current_user.id
@@ -6,7 +7,7 @@ class LikesController < ApplicationController
     likes = {user_id: @user, product_id: @product}
     @like = Like.new(likes)
 
-    @like.save!
+    @like.save
     if @like.save
       flash[:notice] = "You like this product"
       redirect_to product_path(@product)

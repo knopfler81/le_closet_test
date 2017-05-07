@@ -18,13 +18,3 @@ Like.destroy_all
   product.save!
 end
 
-
-
-10.times do
-  like = Like.new(
-    user_id: User.pluck(:id).sample,
-    product_id: Product.pluck(:id).sample
-
-  )
-  like.save!
-end
