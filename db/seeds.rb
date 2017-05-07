@@ -9,7 +9,7 @@ user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
 Product.destroy_all
-Like.destroy_all
+
 
 10.times do
   product = Product.new(
